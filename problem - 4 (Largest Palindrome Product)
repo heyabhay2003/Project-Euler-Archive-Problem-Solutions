@@ -1,0 +1,11 @@
+def palindrome(n):
+    if str(n)==str(n)[::-1]:
+        return True
+largest=0
+for i in range (999,99,-1):
+    for j in range (999,99,-1):
+        product=i*j
+        if palindrome(product) and product>largest:
+            largest=product
+            break
+print(largest)
