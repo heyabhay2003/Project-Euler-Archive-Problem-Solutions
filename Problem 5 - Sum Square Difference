@@ -1,0 +1,11 @@
+sum_100=0
+for i in range (1, 101):
+    sum_100+=i
+store1=sum_100
+value1=store1*store1
+sun=0
+for j in range (1,101):
+    sun=j*j
+    sun+=j
+value2=sun
+print(value1-value2)
