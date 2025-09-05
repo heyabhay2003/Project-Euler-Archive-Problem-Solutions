@@ -1,0 +1,6 @@
+import math
+number=list(range(1,21))
+result=number[0]
+for i in number [1:]:
+    result=math.lcm(result, i)
+print(result)
