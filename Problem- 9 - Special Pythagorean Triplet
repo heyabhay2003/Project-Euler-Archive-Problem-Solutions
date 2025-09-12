@@ -1,0 +1,13 @@
+# not highly optimized but can be helpful
+for i in range(1000):
+    for j in range(1000):
+        k=1000-i-j
+        if i*i+j*j==k*k and k>j and j>i:
+            a=i
+            b=j
+            c=k
+
+print(a)
+print(b)
+print(c)
+print("product", a*b*c)
