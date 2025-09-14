@@ -1,0 +1,12 @@
+def devisers(n):
+    deviser=[]
+    for i in range (1, n//2+1):
+        if n%i==0:
+            deviser.append(i)
+    return sum(deviser)
+sum1=0
+for j in range (10000):
+    k=devisers(j)
+    if j!=k and devisers(k)==j:
+        sum1=sum1+j
+print(sum1)
