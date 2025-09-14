@@ -1,0 +1,9 @@
+n=2**1000
+def digitsum(n):
+    sumn=0
+    for i in str(n):
+        sumn+=int(i)
+    print(sumn)
+digitsum(n)
+
+
