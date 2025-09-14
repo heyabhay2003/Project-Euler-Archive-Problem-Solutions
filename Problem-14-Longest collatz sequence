@@ -1,0 +1,41 @@
+#optimized version...
+
+def longest_collatz(limit=10**6):
+    cache = {1: 1}   
+    longest = 1
+    start = 1
+
+    for i in range(2, limit):
+        n = i
+        steps = 0
+        while n not in cache:
+            if n % 2 == 0:
+                n //= 2
+            else:
+                n = 3 * n + 1
+            steps += 1
+        cache[i] = steps + cache[n]
+        if cache[i] > longest:
+            longest = cache[i]
+            start = i
+
+    return start
+
+print(longest_collatz(10**6))
+
+# not optimized but can work with taking too long..
+long=0
+start=0
+for i in range(10**6):
+    n=i
+    count=1
+    while n!=1:
+        if n%2==0:
+            n=n//2
+        else:
+            n=3*n+1
+        count+=1
+    if count>long:
+            long=count
+            start=i
+print(start)
