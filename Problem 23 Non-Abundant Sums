@@ -1,0 +1,9 @@
+with open(r"C:\\Users\\Lenovo\\Desktop\\names.txt", 'r') as f:
+    data = f.read()
+    names=data.replace('"', '').split(',')
+    names.sort()
+sum2=0
+for i , j in enumerate(names, start=1):
+    sum1=sum(ord(k) - ord('A')+1 for k in j)
+    sum2+=sum1*i
+print(sum2)
