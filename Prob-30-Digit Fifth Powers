@@ -1,0 +1,10 @@
+summ=0
+for i in range(10000,100000):
+    d1=int(str(i)[0])
+    d2=int(str(i)[1])
+    d3=int(str(i)[2])
+    d4=int(str(i)[3])
+    d5=int(str(i)[4])
+    if d1**5+d2**5+d3**5+d4**5==i:
+        summ+=i
+print(summ)
